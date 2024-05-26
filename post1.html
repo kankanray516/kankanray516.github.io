@@ -43,16 +43,16 @@
             <p>
                 - When the Book discusses associativity, it says the two functors \(\box(\box\times 1)\) and \(\box(1\times\box)\) are identical. Here, \(\box\times 1\) is a functor from \((B\times B)\times B\) to \(B\), and \(1\times\box\) is a functor from \(B\times(B\times B)\) to \(B\). The Book claims that it identifies the two domains, and I think it is reasonable. Also, the 
             associativity has two levels, on the level of objects and on the level of morphisms. On the level of objects, we have \(A\box B)\box C=A\box(B\box C)\). And this implies that we can throw the ( and ) away, and simply write it as \(A\box B\box C\). On the level of morphisms, we have: if \(f: A\rightarrow B\), \(g: C\rightarrow D\) and \(h: E\rightarrow F\) are morphisms in \(B\), 
-            then it satisfies the following: (f\box g)\box h=f\box(g\box h). Their dom is \(A\box C\box E\) and codomain is \(B\box D\box F\). We've explained that why we drop the parentheses.
+            then it satisfies the following: \((f\box g)\box h=f\box(g\box h)\). Their dom is \(A\box C\box E\) and codomain is \(B\box D\box F\). We've explained that why we drop the parentheses.
             </p>
             
             <p>
-                - About the role played by \(e\). The Book claims that it is a left and right unit of \(B\), and it writes \(\box(e\times 1)=id_{B}=\box(1\times e)\). Here \(e\times 1\) is seen as a functor from \(B\) to \(B\times B\), with \(c\mapsto\langle e,c\rangle\). It be relaxing if we verify by hand that this is really a functor, but anyway... We understand that this property is also reflected on two levels, 
-            on the level of objects and on the level of morphism. On the level of objects, we have \(e\box c=c=c\box e\). On the level of morphisms, if \(f:c\rightarrow g\) is a morphism, then we have \(1_{e}\box f=f=f\box 1_{e}. It is quite easy isn't it?
+                - About the role played by \(e\). The Book claims that it is a left and right unit of \(B\), and it writes \(\box(e\times 1)=id_{B}=\box(1\times e)\). Here \(e\times 1\) is seen as a functor from \(B\) to \(B\times B\), with \(c\mapsto\langle e,c\rangle\). It can be relaxing if we verify by hand that this is really a functor, but anyway... We understand that this property is also reflected on two levels, 
+            on the level of objects and on the level of morphism. On the level of objects, we have \(e\box c=c=c\box e\). On the level of morphisms, if \(f:c\rightarrow g\) is a morphism, then we have \(1_{e}\box f=f=f\box 1_{e}\). It is quite easy isn't it?
             </p>
         
             <p>
-                - Finally we have to mention that \(\box\) itself is a bifunctor, so it also has to satisfy the axioms for functors. In particular, we have \(1_{a}\box 1_{b}=1_{a\box b}\) and \((f'\box g')(f\box g)=(f'f)\box (g'g)\). Here the domains are left undetermined by we all know what it means.
+                - Finally we have to mention that \(\box\) itself is a bifunctor, so it also has to satisfy the axioms for functors. In particular, we have \(1_{a}\box 1_{b}=1_{a\box b}\) and \((f'\box g')(f\box g)=(f'f)\box (g'g)\). Here the domains are left undetermined because we all know what it means.
             </p>
         </article>
         <p><a href="index.html">Back to Home</a></p>
