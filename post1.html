@@ -39,11 +39,8 @@
         <article>
             <p>Let us start with the strict monoidal category. It is a tuple \(\langle B,\box,e\rangle\), where \(B\) is a category, \(\box\) is a bifunctor with domain \(B\times B\). According to the Book, we require the bifunctor \(B\) to be associative over objects, and the object \(e\) acts as a left and right unit for \(\box\). But I would prefer to write these properties in details:</p>
             <p>- When the Book discusses associativity, it says the two functors \(\box(\box\times 1)\) and \(\box(1\times\box)\) are identical. Here, \(\box\times 1\) is a functor from \((B\times B)\times B\) to \(B\), and \(1\times\box\) is a functor from \(B\times(B\times B)\) to \(B\). The Book claims that it identifies the two domains, and I think it is reasonable. Also, the 
-            associativity has two levels, on objects and on morphisms. On the level of objects, we have</p>
-            <p>\(A\box B)\box C=A\box(B\box C)</p>. And this implies that we can throw the ( and ) away, and simply write it as \(A\box B\box C\).
-            
-            <p>On the level of morphisms, we have: if \(f: A\rightarrow B\), \(g: C\rightarrow D\) and \(h: E\rightarrow F\) are morphisms in \(B\), then it satisfies the following:</p>
-            <p>(f\box g)\box h=f\box(g\box h)</p>. Their dom is \(A\box C\box E\) and codomain is \(B\box\D\box F\). We've explained that why we drop the parentheses.
+            associativity has two levels, on the level of objects and on the level of morphisms. On the level of objects, we have \(A\box B)\box C=A\box(B\box C). And this implies that we can throw the ( and ) away, and simply write it as \(A\box B\box C\).</p>
+            <p>On the level of morphisms, we have: if \(f: A\rightarrow B\), \(g: C\rightarrow D\) and \(h: E\rightarrow F\) are morphisms in \(B\), then it satisfies the following: (f\box g)\box h=f\box(g\box h). Their dom is \(A\box C\box E\) and codomain is \(B\box D\box F\). We've explained that why we drop the parentheses.</p>
             
         </article>
         <p><a href="index.html">Back to Home</a></p>
