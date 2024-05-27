@@ -76,12 +76,18 @@
 
             <p>
                 - First we consider \(\alpha\): it is a natural isomorphism from the functor \(\box(1\times\box)\) to the functor \(\box(\box\times 1)\). Write it component-wisely, for every object \(a\). \(b\) and \(c\), we have an isomorphism \(\alpha_{a,b,c}:a\box(b\box c)\rightarrow(a\box b)\box c\), which is natural. Please note that this \(\alpha\) has to satisfy another important property, say, a pentagonal diagram must commute. The pentafonal diageam starts from \( a\box(b\box(c\box d))\), 
-                ends at \(((a\box b)\box c)\box d\). There are two ways to travel, one way is first go through \(\alpha\) to reach \((a\box b)\box(c\box d)\), then go through \(\alpha\) again to reach \(((a\box b)\box c)\box d\); the other way is to first go through \(1\times\alpha\) to reach \(a\box((b\box c)\box d)\), then go through \(alpha\) to reach \((a\box(b\box c)\)\box d\), finally go through \(\alpha\times 1\) to reach \(((a\box b)\box c)\box d\). This is obviously a pentagonal diagram, 
+                ends at \(((a\box b)\box c)\box d\). There are two ways to travel, one way is first go through \(\alpha\) to reach \((a\box b)\box(c\box d)\), then go through \(\alpha\) again to reach \(((a\box b)\box c)\box d\); the other way is to first go through \(1\box\alpha\) to reach \(a\box((b\box c)\box d)\), then go through \(\alpha\) to reach \((a\box(b\box c)\box d\), finally go through \(\alpha\box 1\) to reach \(((a\box b)\box c)\box d\). This is obviously a pentagonal diagram, 
                 and we require it to commute. I don't fully understand why we really need this term, but people on math stack exchange says it is important in one of Mac Lane's result on monoidal categories, where he proved that by assuming some diagrams( including this pentagonal diagram) commute, we are able to show that all large diagrams about a monoidal category commutes. It is quite amazing, and we will study this.
             </p>
 
             <p>
-                - Second we consider \(\lambda\) and \(\rho\): \(\lambda\) is a natural isomorphism from the functor \(\box(e\times 1)\) to \(id_{B}\), while \(\rho\) is a natural isomorphism from the functor \(\box(1\times e)\) to \(id_{B}\). Write them in components, for every object \(a\) in \(B\), we have natural isomorphisms \(\lambda_{a}:e\box a\rightarrow a\) and \(\rho_{a}:a\box e\rightarrow a\).
+                - Second we consider \(\lambda\) and \(\rho\): \(\lambda\) is a natural isomorphism from the functor \(\box(e\times 1)\) to \(id_{B}\), while \(\rho\) is a natural isomorphism from the functor \(\box(1\times e)\) to \(id_{B}\). Write them in components, for every object \(a\) in \(B\), we have natural isomorphisms \(\lambda_{a}:e\box a\rightarrow a\) and \(\rho_{a}:a\box e\rightarrow a\). These two natural isomorphisms also have to satisfy certains properties. In the Book, there 
+                are two properties to be satisfied. First consider the diagram from \(a\box(e\box b)\) to \(a\box b\). Obviously there are two paths, one is through \(1\box\lambda\), and the other one is first go through \(\alpha\) to reach \((a\box e)\box b\), then go through \(\rho\box 1\). We require the two paths are the same. The second property to be satisfied is that the \(\lambda\) and \(\rho\) agree on \(e\), since there are two ways \(\lambda_{e}\) and \(\rho_{e}\) to tranvel from 
+                \(e\box e\) to \(e\), and we require them to be the same.
+            </p>
+
+            <p>
+                As we have discussed before, with the above definition, especially those commuting diagrams, we are able to show that all large diagram commutes.
             </p>
         </article>
         <p><a href="index.html">Back to Home</a></p>
