@@ -38,6 +38,10 @@
     <main>
         <article>
             <p>
+                Hi, we start to learn the basics of monoidal category, because it is related to categorical quantum theory, and I would like to try it. Another reason is that my life is boring and I am trying to find something intriguing to do, and make me feel that I am not useless.
+            </p>
+            
+            <p>
                 Let us start with the strict monoidal category. It is a tuple \(\langle B,\box,e\rangle\), where \(B\) is a category, \(\box\) is a bifunctor with domain \(B\times B\). According to the Book, we require the bifunctor \(B\) to be associative over objects, and the object \(e\) acts as a left and right unit for \(\box\). But I would prefer to write these properties in details:
             </p>
             
@@ -58,11 +62,12 @@
 
             <p>
                 There are some straightforward examples of monoidal categories, mentioned in the Book. For example, let \(X\) be an arbitrary category, then define \(End(X)\) to be the category with objects as all endofunctors \(S:X\rightarrow X\) and morphisms are natural transformations between those endofunctors, then the \(\box\) is(on the level of objects) simply the composition of functors, i.e. \(S\box T=ST\), and it maps morphisms which are natural transformations 
-                to their horizontal compositions: if \(\theta:S\rightarrow T\) and \(\theta':S'\rightarrow T'\) are two natural transformations, then \(\theta\box\theta':S\box S'\rightarrow T\box T'\) is the natural transformation from \(SS'\) to \(TT'\), and its components are \((\theta\box\theta')_{c}=...:SSc\rightarrow TT'c\). It is then straightforward to verify that such construction is really a monoidal category.
+                to their horizontal compositions: if \(\theta:S\rightarrow T\) and \(\theta':S'\rightarrow T'\) are two natural transformations, then \(\theta\box\theta':S\box S'\rightarrow T\box T'\) is the natural transformation from \(SS'\) to \(TT'\), and its components are \((\theta\box\theta')_{c}=...:SSc\rightarrow TT'c\). It is then straightforward to verify that such construction is really a strict monoidal category. By the way, I forget to mention the \(e\) in this 
+                strict monoidal category: it is simply the functor \(id_{X}\), which is obvious.
             </p>
 
             <p>
-                Another example is monoid. We can discuss this tomorrow.
+                Another example is monoid. Recall a category is a monoid it has only one object. Now given a monoid, we build a corresponding strict monoidal categotry, where objects are morphisms in the monoid, and treat it as a discrete category, and the monoidal operator \(\box\) is simply the composition of morphisms in the monoid. Finally the \(e\) is the unique identical morphism in the monoid. I guess it is not hard to verify all requirements.
             </p>
         </article>
         <p><a href="index.html">Back to Home</a></p>
