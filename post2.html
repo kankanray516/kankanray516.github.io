@@ -56,7 +56,9 @@
             <p>
                 After defining the category \(W\), the Book introduces its first big result, which states that for any monoidal category \(B\), and arbitrary object \(b\) of \(B\), there exists a unique morphism of monoidal categories(which is a functor from that respects every relevent gredients) from \(W\) to \(B\) such that \((-)\) is mapped to
                 \(b\). It is quite a intuitive result, and I don't want to prove it. Instead, this post is going to focus on another result, which I believe crucial. Roughly speaking, the results says that every diagram in a monoidal category that intuitively commutes must commute. What does it mean to be 'intuitively commutes'? Well, we can make 
-                it precise. Consider an object in the category \(W\). We treat it as a word, and those \((-)\) in the object can be seen as blanks to be filled in, we we use objects in \(B\) to fill in the blanks. After all the blanks are filled with objects in \(B\), it forms another object of \(B\), in the most straightforward sense.
+                it precise. Consider an object in the category \(W\). We treat it as a word, and those \((-)\) in the object can be seen as blanks to be filled in, we we use objects in \(B\) to fill in the blanks. After all the blanks are filled with objects in \(B\), it forms another object of \(B\), in the most straightforward sense. But wait, maybe 
+                we have to put some restrictions: we only fill in objects that are not \(e\) in \(B\). This is simply because we already have \(e_0\). So now we can put things together. Let \(v\) be an object of \(W\) and its length is \(n\), which is greater or equal to \(0\). Now, assume \(\vec{a}\) is a n-ary assignments of non-\(e\) elements in \(B\), 
+                then let \(v_{\vec{a}}\) be the object in \(B\) constructed by filling objects in \(\vec{a}\} into \(v\)(respects the order) and replace \(e_0\) by \(e\).
             </p>
 
             
