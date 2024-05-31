@@ -49,7 +49,7 @@
             <p>
                 Firstly, we define a monoidal category \(W\), which can be seen as a prototype of all monoidal categories. Consider a symbol \(e_0\), which stands for unit. Consider another symbol\((-)\), which stands for a blank to be written. Then the objects of this category are built recursively in the following way. \(e_0\) and \((-)\) are 
                 two basic ones, and if \(v\) and \(w\) are two objects of \(W\), then \((v\box w)\) is also an object of \(W\), and all objects are constructed in this way. Note that it is quite like the way of defining formulas in any logic. After defining the objects, we define the morphisms, but wait, we have to introduce the concept of length. 
-                Let \(v\) be an object of \(W\), then the length of \(v\) is the number of \((-)\) in \(v\). This can also be defined recursively: \(length(e_0)=0\), \(length((-))=1\) and \(length(v\box w)=length(v)+\length(w)\). Then we define morphism between objects with the same length, and for any two objects with the same length, say \(v\) 
+                Let \(v\) be an object of \(W\), then the length of \(v\) is the number of \((-)\) in \(v\). This can also be defined recursively: \(length(e_0)=0\), \(length((-))=1\) and \(length(v\box w)=length(v)+length(w)\). Then we define morphism between objects with the same length, and for any two objects with the same length, say \(v\) 
                 and \(w\) with \(length(v)=length(w)\), there is a unique morphism from \(v\) to \(w\), i.e. \(|Hom(v,w)|=1\). Composition of morphisms is obvious. Actually, this category \(W\) can be seen as a pre-order.
             </p>
 
@@ -58,12 +58,12 @@
                 \(b\). It is quite a intuitive result, and I don't want to prove it. Instead, this post is going to focus on another result, which I believe crucial. Roughly speaking, the results says that every diagram in a monoidal category that intuitively commutes must commute. What does it mean to be 'intuitively commutes'? Well, we can make 
                 it precise. Consider an object in the category \(W\). We treat it as a word, and those \((-)\) in the object can be seen as blanks to be filled in, we we use objects in \(B\) to fill in the blanks. After all the blanks are filled with objects in \(B\), it forms another object of \(B\), in the most straightforward sense. But wait, maybe 
                 we have to put some restrictions: we only fill in objects that are not \(e\) in \(B\). This is simply because we already have \(e_0\). So now we can put things together. Let \(v\) be an object of \(W\) and its length is \(n\), which is greater or equal to \(0\). Now, assume \(\vec{a}\) is a n-ary assignments of non-\(e\) elements in \(B\), 
-                then let \(v_{\vec{a}}\) be the object in \(B\) constructed by filling objects in \(\vec{a}\} into \(v\)(respects their order in \(\vec{a}\)) and replace \(e_0\) by \(e\). This solves the object defining issue.
+                then let \(v_{\vec{a}}\) be the object in \(B\) constructed by filling objects in \(\vec{a}\) into \(v\)(respects their order in \(\vec{a}\)) and replace \(e_0\) by \(e\). This solves the object defining issue.
             </p>
 
             <p>
                 Then if \(v\) and \(w\) are two objects in \(W\), and they have the same length: \(length(v)=length(w)=n\geq 0\), then we can apply morphism constructed by \(\alpha\), \(\lambda\) and \(\rho\) to go from one to another. Formally, we define what are constructable morphism of \(B\). The constructable morphism of \(B\) can only be constructed 
-                in the following way: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are constructable morphisms, and if \(\alpha\) and \(\bete\) are constructable morphisms, then so does \(\alpha\box \beta\). Here we do not specify the indecies of those morphism, but I believe things are clear. And now we are 
+                in the following way: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are constructable morphisms, and if \(\alpha\) and \(\beta\) are constructable morphisms, then so does \(\alpha\box \beta\). Here we do not specify the indecies of those morphism, but I believe things are clear. And now we are 
                 able to state our main result:
             </p>
                 
