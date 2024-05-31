@@ -72,7 +72,20 @@
                 this is a unique constructable morphism from \(v_{\vec{a}}\) to \(w_{\vec{a}}\).
             </p>
 
-            If we think a little bit, we will find that this result is actually very intuitive. But to prove it, we have to do some work, which I think is very helpful in understanding the monoidal categories. So let us do it step by step.
+            <p>
+                If we think a little bit, we will find that this result is actually very intuitive. But to prove it, we have to do some work, which I think is very helpful in understanding the monoidal categories. So let us do it step by step.      
+            </p>
+            
+            <p>
+                It is quite helpful to observe that contructable morphisms can be decomposed into some more basic morphism. We define basic morphisms recursively as the following: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are basic morphisms, and if \(\beta\) is a basic morphism, then so does \(1\box\beta\) and \(\beta\box 1\). 
+                Then we understand that every basic morphism is either the identical morphism, or contains exactly one of the \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\), and it occurs only once. Now, I claim that every constructable morphism is a composition of some basic morphisms. Why? This can be proved by induction on the 
+                complexity of constructable morphism. Clearly all the basic entity of constructable morphism are themselves basic morphisms; also, consider a constructable morphism of the form \(\alpha\box \beta\), then we understand that \(\alpha\box\beta=(\alpha\box 1)(1\box \beta)\), and both \(\alpha\box 1\) and \(1\box\beta\) can be decomposed into basic morphisms by 
+                induction hypothesis, thus so does \(\alpha\box\beta\).
+            </p>
+
+            <p>
+                
+            </p>
             
         </article>
         <p><a href="index.html">Back to Home</a></p>
