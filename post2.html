@@ -63,7 +63,7 @@
 
             <p>
                 Then if \(v\) and \(w\) are two objects in \(W\), and they have the same length: \(length(v)=length(w)=n\geq 0\), then we can apply morphism constructed by \(\alpha\), \(\lambda\) and \(\rho\) to go from one to another. Formally, we define what are constructable morphism of \(B\). The constructable morphism of \(B\) can only be constructed 
-                in the following way: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are constructable morphisms, and if \(\alpha\) and \(\beta\) are constructable morphisms, then so does \(\alpha\box \beta\). Here we do not specify the indecies of those morphism, but I believe things are clear. And now we are 
+                in the following way: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are constructable morphisms, and if \(\beta\) and \(\beta'\) are constructable morphisms, then so does \(\beta\box \beta'\). Here we do not specify the indecies of those morphism, but I believe things are clear. And now we are 
                 able to state our main result:
             </p>
                 
@@ -79,14 +79,23 @@
             <p>
                 It is quite helpful to observe that contructable morphisms can be decomposed into some more basic morphism. We define basic morphisms recursively as the following: \(1\), \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\) are basic morphisms, and if \(\beta\) is a basic morphism, then so does \(1\box\beta\) and \(\beta\box 1\). 
                 Then we understand that every basic morphism is either the identical morphism, or contains exactly one of the \(\alpha\), \(\alpha^{-1}\), \(\lambda\), \(\lambda^{-1}\), \(\rho\) and \(\rho^{1}\), and it occurs only once. Now, I claim that every constructable morphism is a composition of some basic morphisms. Why? This can be proved by induction on the 
-                complexity of constructable morphism. Clearly all the basic entity of constructable morphism are themselves basic morphisms; also, consider a constructable morphism of the form \(\alpha\box \beta\), then we understand that \(\alpha\box\beta=(\alpha\box 1)(1\box \beta)\), and both \(\alpha\box 1\) and \(1\box\beta\) can be decomposed into basic morphisms by 
-                induction hypothesis, thus so does \(\alpha\box\beta\).
+                complexity of constructable morphism. Clearly all the basic entity of constructable morphism are themselves basic morphisms; also, consider a constructable morphism of the form \(\beta\box \beta'\), then we understand that \(\beta\box\beta'=(\beta\box 1)(1\box \beta')\), and both \(\beta\box 1\) and \(1\box\beta'\) can be decomposed into basic morphisms by 
+                induction hypothesis, thus so does \(\beta\box\beta'\).
             </p>
 
             <p>
-                
+                Now, for two objects \(v\) and \(w\) having the same length, and if \(\beta\) is a constructable morphism, we know it is a composition of some basic morphisms. But it is better to work only with those basic morphism constructed by \(1\), \(\alpha\), \(\lambda\) and \(\rho\), because those constructed by 
+                \(\alpha^{-1}\), \(\lambda^{-1}\) and \(\rho^{-1}\) are simply their inverses. And surprisingly, to prove the result, it suffices to prove it in a special case. We understand that for any \(\vec{a}\), there is a classical way to compose it: we require all left parentheses occur on the left-most. For example, given \(\vec{a}=(a_1,a_2,a_3)\), the the classical way 
+                of composing it is \(((a_1\box a_2)\box a_3)\). For \(\vev{a}\), we use \(m_{\vec{a}}\) to denote its classical composition. Then I claim it suffices to show that for any \(v\) and \(\vec{a}\), there is a unique way to go from \(v_{\vec{a}}\) to \(m_{\vec{a}}\) by composing basic morphisms that constructed from \(1\), \(\alpha\), \(\lambda\) and \(\rho\). Once 
+                we proved this, it is straightforward to show that the unique constructable morphism from \(v_{\vec{a}}\) to \(w_{\vec{a}}\) is \(v_{\vec{a}}\rightarrow m_{\vec{a}}\rightarrow w_{\vec{a}}\), where the two arrows are unique.
             </p>
+
+            <p>
+                So in the rest of the post, we are going to focus on the proof of that specific result. Actually it is not hard, simply discussion by cases.
+            </p>
+
             
+                
         </article>
         <p><a href="index.html">Back to Home</a></p>
     </main>
