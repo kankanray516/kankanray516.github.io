@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Personal Blog with Math</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="text/javascript">
+    MathJax = {
+        tex: {
+            packages: {'[+]': ['ams', 'newcommand', 'color']}
+        }
+    };
+</script>
+        <script type="text/javascript">
+        MathJax = {
+            tex: {
+                macros: {
+                    box: ['\\mathord{\\Box}', 0],
+                    diamond: ['\\mathord{\\Diamond}', 0]
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+        <h1>Tensor product of \(A\)-modules, some discussions</h1>
+        <p>First published on: 2024-07-02</p>
+    </header>
+    <main>
+        <article>
+            <p>
+                Keep working on commutative algebra. Recently I started to read AG, but quickly got stuck when I met the concept of height and dimension. In Hartshorne's book, some results on dimensions and heights are presented without proof, with only 
+                references to matsumura and so on. When I read the corresponding parts in matsumura, I found it horrible and acctually hard to understand, since there are too many brand new concepts to me. I have to struggle learning every new concepts, 
+                figure out there properties, and eventually glue them together to get the desired result. Today, we study the result which states that a ring is Artinian if and only if itself as a \(A\)-module has finite length. Here being Artinian means 
+                there is no infinite descending chain of ideals in \(A\). The length of a \(A\)-modules \(M\) is the supremum of the length of any chain of submodules of \(M\).
+            </p>
+
+            <p>
+                We look the result carefully. If \(A\) has finite length, then \(A\) must be Artinian, since submodules of \(A\) are exactly the ideals, but the length of chain of ideals is restricted by the length, which is finite. Therefore there is no 
+                infinite descending chain. The other direction is harder. Now we assume that \(A\) is Artinian. We take 3 steps to show that \(A\) has finite length.
+            </p>
+
+            <p>
+                Firstly, we show that if \(A\) is Artinian, then it is also semi-local, i.e. it has only finitely many maximal ideals. This is not hard, since otherwise there are \(p_1,p_2,\dots\), and it induces that there is an infinite descending chain: 
+                \(p_1\supset p_1p_2\supset p_1p_2p_3\supset\dots\). It is easy to see why the inclusion is strict: consider other wise \(p_1\dots p_n=p_1\dots p_{n+1}\), then note that we have multiplication is the same as intersection for maximal ideals,
+                so \(p_1\dots p_n\subseteq p_{n+1}\), then for \(j=1,\dots,n\) we pick \(x_j\) from \(p_j-p_{n+1}\), and multiply them all, we know \(x_1\dots x_n\in p_{n+1}\), but then some \(x_j\in p_{n+1}\), contradiction. Therefore \(A\) is semi-local, 
+                we write \((A,p_1,\dots,p_r)\), where \(p_1,\dots, p_r\) are the only maximal ideals.
+            </p>
+
+            <p>
+                Secondly, define \(I=p_1\dots p_r\). We have \(I\supseteq I^2\supseteq I_3\supseteq\dots\), so Artinian implies that there is some \(s\) such that \(I^s=I^{s+1}\). Then we claim that \(I^s=(0)\). This is equivalent to showing that \(J=(0,I^s)\) 
+                is the whole space \(A\). Note that \((J,I)=((0,I^S),I)=(0,I^{s+1})=(0,I^s)=J\), i.e. \((J,I)=J\). Now, if \(J\) is not \(A\), then let \(Y\) be the smallest ideal that satisfies \(J\subset Y\subseteq A\), which exists since \(A\) is Artinian. 
+                Now, for every \(x\in Y-J\), we know \(Y=Ax+J\) by the minimality. Then we consider \(Ix+J\) for some \(x\in Y-A\). If \(Y=Ix+J\), then since \((x)\) is finitely generated, \(I\) is the \(rad(A)\) and of course \((x)\) and \(J\) are submodules 
+                of \(Y\), then apply the corollary of nakayama's lemma, we know that \(Y=J\), contradiction. So \(J\subseteq Ix+J\subset Y\), then by minimality, \(J=Ix+J\). This implies that \(Ix\subseteq J\), then \(X\in (J,I)=J\), again contradiction. In conclusion, 
+                \(J=A\), so \(I^s=(0)\).
+            </p>
+
+            <p>
+                Finally, we are able to show that \(A\) has finite length. Consider the finite sequence: \(A\supseteq p_1\supseteq p_1p_2\supseteq\dots I\supseteq Ip_1\supseteq\dots I^s=(0)\). For each segment, we understand that there is a corresponding exact sequence. 
+                It's like \((\dots)\supset (\dots)p_i\), and \(0\xrightarrow[]{inclusion} (\dots)p_i\rightarrow (\dots)\rightarrow (\dots)/(\dots)p_i\). It is not hard to verify that \((\dots)/(\dots)p_i\) is a vector space over the field \(A/p_i\), and its length coincides 
+                with its dimension, and the dimension must be finite: otherwise if it has infinite dimension, we can construct a infinite descending chain of subspaces, which corresponds to an infinite descending chain of ideals between \((\dots)p_i\) and \((\dots)\). 
+                But \(A\) is Artinian, so this could not happen. Notice that if \(0\rightarrow L\xrightarrow[]{f}M\xrightarrow[]{g}N\rightarrow 0\) is exact, and all of their lengths are finite, then we have \(l_{A}(M)=l_{A}(L)+l_{A}(N)\), which is good, since 
+                we can apply this many times to reach the fact that \(l_{A}(A)\) is finite. Oh, \(l_{A}(M)\) is the length of a \(A\)-module \(M\). 
+            </p>
+
+            <p>
+                Note that we skipped many details above, but I think it is completely okay to do so. So let's halt now.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+          
+          
+
+            
+
+
+                
+        </article>
+        <p><a href="index.html">Back to Home</a></p>
+    </main>
+        <!-- Your content goes here -->
+    </body>
+</html>
